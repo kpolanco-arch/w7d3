@@ -5,7 +5,7 @@ RSpec.describe UsersController, type: :controller do
 describe 'GET #new' do
     it 'renders new users page' do
 
-      get :new, users: {}
+      get :new, users: {username:'kayla123', password: 'password'}
       expect(response).to render_template('new')
       expect(response).to have_http_status(200)
     end
